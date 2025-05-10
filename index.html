@@ -120,7 +120,7 @@
       <div>Certificate of Cohabitation</div>
       <div>Certificate for Widow/Widower</div>
       <div>Certificate of Residence</div>
-      <a href="services/birth-certificate.html">Birth Services</a>
+      <a href="#" onclick="handleNavigation('services/birth-certificate.html')">Birth Services</a>
       <div>Marriage Services</div>
       <div>Death Services</div>
       <div>Adoption Record</div>
@@ -142,9 +142,9 @@
       <div>Burundian Nationality</div>
       <div>Permit and Visa Transfer</div>
       <div>Burundian Nationality by Origin</div>
-      <a href="services/passport-application.html">e-Passport Application</a>
+      <a href="#" onclick="handleNavigation('services/passport-application.html')">e-Passport Application</a>
       <div>Laissez-passer</div>
-      <a href="services/visa-application.html">Visa Application</a>
+      <a href="#" onclick="handleNavigation('services/visa-application.html')">Visa Application</a>
       <div>Permits</div>
       <div>Foreigner ID Card</div>
       <div>Foreigner Travel Document</div>
@@ -156,7 +156,7 @@
     <div class="services">
       <div>Change of Name</div>
       <div>Application for National ID Correction</div>
-      <a href="services/national-id.html">Application for National ID</a>
+      <a href="#" onclick="handleNavigation('services/national-id.html')">Application for National ID</a>
       <div>National ID Replacement</div>
       <div>Certificate for Replacement of National Identity Card</div>
       <div>Certificate of Full Identity</div>
@@ -196,6 +196,16 @@
       window.location.href = "login.html";
     }
 
+    function handleNavigation(destination) {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+      if (isLoggedIn) {
+        window.location.href = destination;
+      } else {
+        alert("Please log in to access this service.");
+        window.location.href = "login.html";
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       const isLoggedIn = localStorage.getItem("loggedIn");
       const user = JSON.parse(localStorage.getItem("user"));
@@ -214,4 +224,3 @@
   </script>
 </body>
 </html>
-
