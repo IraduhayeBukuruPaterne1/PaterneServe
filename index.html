@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PaterneServe</title>
+  <title>PaterneServe - Digital Services in Burundi</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,12 +11,10 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
-
     body {
       background-color: #f0fdf4;
       color: #1f2937;
     }
-
     header {
       background-color: #16a34a;
       color: white;
@@ -25,24 +23,21 @@
       justify-content: space-between;
       align-items: center;
     }
-
     header .nav-links {
       display: flex;
       gap: 20px;
       font-size: 14px;
     }
-
     .hero {
       background-color: #22c55e;
       text-align: center;
       padding: 60px 20px;
     }
-
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
+      color: white;
     }
-
     .search-bar {
       margin: 0 auto;
       width: 50%;
@@ -52,50 +47,35 @@
       display: flex;
       align-items: center;
     }
-
     .search-bar input {
       width: 100%;
       border: none;
       font-size: 16px;
       outline: none;
     }
-
-    .services {
-      background-color: #e6fbe8;
-      padding: 30px 20px;
-      margin: 30px auto;
-      width: 85%;
-      border-radius: 10px;
+    .category {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    .services h2 {
+    .category h2 {
+      color: #15803d;
+      font-size: 22px;
       margin-bottom: 10px;
-      font-size: 20px;
     }
-
-    .services p {
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: #4b5563;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
     }
-
-    .services a {
-      color: #065f46;
-      text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
+    .services div {
+      background: #dcfce7;
+      padding: 15px;
+      border-radius: 8px;
     }
-
-    .explore-button {
-      background-color: #16a34a;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 10px;
+    .services div:hover {
+      background: #bbf7d0;
     }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -124,16 +104,53 @@
     </div>
   </section>
 
-  <section class="services">
-    <h2>Services on the upgraded PaterneServe</h2>
-    <p>Experience the upgraded PaterneServe! With new features and a smoother experience shaped by your feedback, the journey just keeps getting better — stay tuned for more!</p>
-    <div>
-      <a href="#">RICSTA - RW Domain Registration</a>
-      <a href="#">IPOSITA - Register an ePoBox Address</a>
-      <a href="#">IPOSITA - Renew an ePoBox Address</a>
-      <a href="#">IPOSITA - Change ePoBox Postal Office</a>
+  <section class="category">
+    <h2>Family Services</h2>
+    <div class="services">
+      <div>Certificate of Being Single</div>
+      <div>Marriage Services</div>
+      <div>Divorce Services</div>
+      <div>Birth & Death Services</div>
+      <div>Guardianship Record</div>
+      <div>Orphan Status Authentication</div>
+      <div>Recommendation for Disabilities</div>
     </div>
-    <button class="explore-button">Explore →</button>
+  </section>
+
+  <section class="category">
+    <h2>Immigration & Identification</h2>
+    <div class="services">
+      <div>Application for National ID</div>
+      <div>National ID Replacement</div>
+      <div>Change of Name</div>
+      <div>Refugee Travel Documents</div>
+      <div>Burundi Passport Application</div>
+      <div>Visa & Permit Services</div>
+      <div>Laissez-passer</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Health Services</h2>
+    <div class="services">
+      <div>COVID-19 Test</div>
+      <div>Laboratory Test Results</div>
+      <div>Mutuelle de Santé Registration</div>
+      <div>Health Facility Accreditation</div>
+      <div>Yellow Fever Vaccination</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Education Services</h2>
+    <div class="services">
+      <div>Equivalence Certificate</div>
+      <div>ECD Accreditation</div>
+      <div>Import Approval (IT Equipment)</div>
+      <div>NGO/Private Education MOUs</div>
+      <div>Qualification Equating (Higher Ed)</div>
+      <div>Qualification Equating (Primary/Secondary)</div>
+    </div>
   </section>
 
   <footer>
