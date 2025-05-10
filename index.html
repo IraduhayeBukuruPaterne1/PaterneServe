@@ -68,12 +68,15 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 10px;
     }
-    .services div {
+    .services a, .services div {
       background: #dcfce7;
       padding: 15px;
       border-radius: 8px;
+      text-decoration: none;
+      color: #065f46;
+      display: block;
     }
-    .services div:hover {
+    .services a:hover, .services div:hover {
       background: #bbf7d0;
     }
     footer {
@@ -120,7 +123,7 @@
   <section class="category">
     <h2>Immigration & Identification</h2>
     <div class="services">
-      <div>Application for National ID</div>
+      <a href="services/national-id.html">Application for National ID</a>
       <div>National ID Replacement</div>
       <div>Change of Name</div>
       <div>Refugee Travel Documents</div>
@@ -158,4 +161,3 @@
   </footer>
 </body>
 </html>
-
