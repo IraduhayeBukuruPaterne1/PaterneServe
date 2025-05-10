@@ -1,121 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Apply for National ID - PaterneServe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaterneServe</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0fdf4;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
     }
+
+    body {
+      background-color: #f0fdf4;
+      color: #1f2937;
+    }
+
     header {
       background-color: #16a34a;
       color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    main {
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    header .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
     }
-    h2 {
-      color: #15803d;
-      margin-bottom: 1rem;
-    }
-    label {
-      display: block;
-      margin: 1rem 0 0.3rem;
-      font-weight: bold;
-    }
-    input, select {
-      width: 100%;
-      padding: 0.6rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    input[type="file"] {
-      padding: 0.3rem;
-    }
-    button {
-      margin-top: 1.5rem;
+
+    .hero {
       background-color: #22c55e;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      margin: 0 auto;
+      width: 50%;
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .services {
+      background-color: #e6fbe8;
+      padding: 30px 20px;
+      margin: 30px auto;
+      width: 85%;
+      border-radius: 10px;
+    }
+
+    .services h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .services p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .services a {
+      color: #065f46;
+      text-decoration: none;
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .explore-button {
+      background-color: #16a34a;
       color: white;
       border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 6px;
       cursor: pointer;
+      margin-top: 10px;
     }
-    button:hover {
-      background-color: #16a34a;
-    }
-    small {
-      display: block;
-      margin-top: 4px;
-      color: #6b7280;
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #d1fae5;
       font-size: 12px;
+      color: #374151;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>PaterneServe</h1>
+    <div class="logo"><strong>PaterneServe</strong></div>
+    <div class="nav-links">
+      <a href="#" style="color: white;">Support Center</a>
+      <a href="#" style="color: white;">Sign Up</a>
+      <a href="#" style="color: white;">Log In</a>
+      <a href="#" style="color: white;">Find Applications</a>
+      <a href="#" style="color: white;">English ▼</a>
+    </div>
   </header>
 
-  <main>
-    <h2>Application for National ID</h2>
-    <form>
-      <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" name="fullName" required />
+  <section class="hero">
+    <h1>Welcome</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for services">
+    </div>
+  </section>
 
-      <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" name="dob" required />
+  <section class="services">
+    <h2>Services on the upgraded PaterneServe</h2>
+    <p>Experience the upgraded PaterneServe! With new features and a smoother experience shaped by your feedback, the journey just keeps getting better — stay tuned for more!</p>
+    <div>
+      <a href="#">RICSTA - RW Domain Registration</a>
+      <a href="#">IPOSITA - Register an ePoBox Address</a>
+      <a href="#">IPOSITA - Renew an ePoBox Address</a>
+      <a href="#">IPOSITA - Change ePoBox Postal Office</a>
+    </div>
+    <button class="explore-button">Explore →</button>
+  </section>
 
-      <label for="birthPlace">Place of Birth</label>
-      <input type="text" id="birthPlace" name="birthPlace" required />
-
-      <label for="nationality">Nationality</label>
-      <input type="text" id="nationality" value="Burundian" readonly />
-
-      <label for="gender">Gender</label>
-      <select id="gender" name="gender" required>
-        <option value="">Select Gender</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="+257..." required />
-
-      <label for="email">Email (optional)</label>
-      <input type="email" id="email" name="email" />
-
-      <!-- File uploads section -->
-      <label for="birthCertificate">Upload Birth Certificate</label>
-      <input type="file" id="birthCertificate" name="birthCertificate" accept=".pdf,.jpg,.png" required />
-      <small>Accepted formats: PDF, JPG, PNG</small>
-
-      <label for="parentID">Parent/Guardian ID (if applicant is a minor)</label>
-      <input type="file" id="parentID" name="parentID" accept=".pdf,.jpg,.png" />
-      <small>Optional if over 18 years old</small>
-
-      <label for="passportPhoto">Passport-size Photo</label>
-      <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required />
-      <small>Clear color photo with white background</small>
-
-      <label for="residenceProof">Proof of Residence (optional)</label>
-      <input type="file" id="residenceProof" name="residenceProof" accept=".pdf,.jpg,.png" />
-
-      <button type="submit">Submit Application</button>
-    </form>
-  </main>
+  <footer>
+    &copy; 2025 PaterneServe. All rights reserved.
+  </footer>
 </body>
 </html>
