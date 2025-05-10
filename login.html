@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Account - PaterneServe</title>
+  <title>Login - PaterneServe</title>
   <style>
     body {
       background-color: #f0fdf4;
@@ -68,61 +68,39 @@
 </head>
 <body>
   <div class="container">
-    <h2>Create an Account</h2>
-    <form onsubmit="registerUser(event)">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" required />
-
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" required />
-
+    <h2>Login to Your Account</h2>
+    <form onsubmit="loginUser(event)">
       <label for="email">Email</label>
       <input type="email" id="email" required />
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" required />
-
       <label for="password">Password</label>
       <input type="password" id="password" required />
-      <div id="passwordError" class="error"></div>
+      <div id="loginError" class="error"></div>
 
-      <button type="submit">Register</button>
+      <button type="submit">Login</button>
     </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
+    <p>Don't have an account? <a href="register.html">Create one</a></p>
   </div>
 
   <script>
-    function validatePassword(password) {
-      const minLength = 8;
-      const hasUpper = /[A-Z]/.test(password);
-      const hasLower = /[a-z]/.test(password);
-      const hasNumber = /[0-9]/.test(password);
-      const hasSymbol = /[^A-Za-z0-9]/.test(password);
-      return password.length >= minLength && hasUpper && hasLower && hasNumber && hasSymbol;
-    }
-
-    function registerUser(event) {
+    function loginUser(event) {
       event.preventDefault();
-      const user = {
-        firstName: document.getElementById("firstName").value,
-        lastName: document.getElementById("lastName").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        password: document.getElementById("password").value,
-      };
 
-      const errorDiv = document.getElementById("passwordError");
-      if (!validatePassword(user.password)) {
-        errorDiv.textContent = "Password must be at least 8 characters, include uppercase, lowercase, number, and symbol.";
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const errorDiv = document.getElementById("loginError");
+
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+
+      if (!storedUser || storedUser.email !== email || storedUser.password !== password) {
+        errorDiv.textContent = "Invalid email or password.";
         return;
       }
 
-      localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("loggedIn", "true");
-
-      alert("Account created successfully!");
       window.location.href = "index.html";
     }
   </script>
 </body>
 </html>
+
