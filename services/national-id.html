@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "../login.html";
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Apply for National ID - PaterneServe</title>
   <style>
@@ -44,53 +49,4 @@
       margin-top: 1.5rem;
       background-color: #22c55e;
       color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #16a34a;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>PaterneServe</h1>
-  </header>
-
-  <main>
-    <h2>Application for National ID</h2>
-    <form>
-      <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" name="fullName" required />
-
-      <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" name="dob" required />
-
-      <label for="birthPlace">Place of Birth</label>
-      <input type="text" id="birthPlace" name="birthPlace" required />
-
-      <label for="nationality">Nationality</label>
-      <input type="text" id="nationality" value="Burundian" readonly />
-
-      <label for="gender">Gender</label>
-      <select id="gender" name="gender" required>
-        <option value="">Select Gender</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="+257..." required />
-
-      <label for="email">Email (optional)</label>
-      <input type="email" id="email" name="email" />
-
-      <button type="submit">Submit Application</button>
-    </form>
-  </main>
-</body>
-</html>
+      border: non

@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>e-Passport Application - PaterneServe</title>
   <script>
     if (!localStorage.getItem("loggedIn")) {
       window.location.href = "../login.html";
     }
   </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>e-Passport Application - PaterneServe</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -106,21 +106,4 @@
 
       <label for="nationalID">Upload National ID or Birth Certificate</label>
       <input type="file" id="nationalID" name="nationalID" accept=".pdf,.jpg,.png" required />
-      <small>Required for both new and renewal applications</small>
-
-      <label for="passportPhoto">Upload Passport-size Photo</label>
-      <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required />
-      <small>Recent color photo, white background</small>
-
-      <label for="proofOfPayment">Upload Proof of Payment</label>
-      <input type="file" id="proofOfPayment" name="proofOfPayment" accept=".pdf,.jpg,.png" required />
-
-      <label for="oldPassport">Upload Old Passport (for renewal only)</label>
-      <input type="file" id="oldPassport" name="oldPassport" accept=".pdf,.jpg,.png" />
-      <small>Only required if you're renewing your passport</small>
-
-      <button type="submit">Submit Application</button>
-    </form>
-  </main>
-</body>
-</html>
+      <small>Required for both new a
