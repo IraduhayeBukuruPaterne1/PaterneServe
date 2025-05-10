@@ -1,163 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PaterneServe - Digital Services in Burundi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply for National ID - PaterneServe</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fdf4;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background-color: #f0fdf4;
-      color: #1f2937;
     }
     header {
       background-color: #16a34a;
       color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header .nav-links {
-      display: flex;
-      gap: 20px;
-      font-size: 14px;
-    }
-    .hero {
-      background-color: #22c55e;
+      padding: 1rem 2rem;
       text-align: center;
-      padding: 60px 20px;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: white;
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-    .search-bar {
-      margin: 0 auto;
-      width: 50%;
-      background: white;
-      padding: 10px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-    }
-    .search-bar input {
-      width: 100%;
-      border: none;
-      font-size: 16px;
-      outline: none;
-    }
-    .category {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .category h2 {
+    h2 {
       color: #15803d;
-      font-size: 22px;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
     }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
-    }
-    .services a, .services div {
-      background: #dcfce7;
-      padding: 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #065f46;
+    label {
       display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
     }
-    .services a:hover, .services div:hover {
-      background: #bbf7d0;
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #d1fae5;
+    input[type="file"] {
+      padding: 0.3rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a34a;
+    }
+    small {
+      display: block;
+      margin-top: 4px;
+      color: #6b7280;
       font-size: 12px;
-      color: #374151;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo"><strong>PaterneServe</strong></div>
-    <div class="nav-links">
-      <a href="#" style="color: white;">Support Center</a>
-      <a href="#" style="color: white;">Sign Up</a>
-      <a href="#" style="color: white;">Log In</a>
-      <a href="#" style="color: white;">Find Applications</a>
-      <a href="#" style="color: white;">English ▼</a>
-    </div>
+    <h1>PaterneServe</h1>
   </header>
 
-  <section class="hero">
-    <h1>Welcome</h1>
-    <div class="search-bar">
-      <input type="text" placeholder="Search for services">
-    </div>
-  </section>
+  <main>
+    <h2>Application for National ID</h2>
+    <form>
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required />
 
-  <section class="category">
-    <h2>Family Services</h2>
-    <div class="services">
-      <div>Certificate of Being Single</div>
-      <div>Marriage Services</div>
-      <div>Divorce Services</div>
-      <div>Birth & Death Services</div>
-      <div>Guardianship Record</div>
-      <div>Orphan Status Authentication</div>
-      <div>Recommendation for Disabilities</div>
-    </div>
-  </section>
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
 
-  <section class="category">
-    <h2>Immigration & Identification</h2>
-    <div class="services">
-      <a href="services/national-id.html">Application for National ID</a>
-      <div>National ID Replacement</div>
-      <div>Change of Name</div>
-      <div>Refugee Travel Documents</div>
-      <div>Burundi Passport Application</div>
-      <div>Visa & Permit Services</div>
-      <div>Laissez-passer</div>
-    </div>
-  </section>
+      <label for="birthPlace">Place of Birth</label>
+      <input type="text" id="birthPlace" name="birthPlace" required />
 
-  <section class="category">
-    <h2>Health Services</h2>
-    <div class="services">
-      <div>COVID-19 Test</div>
-      <div>Laboratory Test Results</div>
-      <div>Mutuelle de Santé Registration</div>
-      <div>Health Facility Accreditation</div>
-      <div>Yellow Fever Vaccination</div>
-    </div>
-  </section>
+      <label for="nationality">Nationality</label>
+      <input type="text" id="nationality" value="Burundian" readonly />
 
-  <section class="category">
-    <h2>Education Services</h2>
-    <div class="services">
-      <div>Equivalence Certificate</div>
-      <div>ECD Accreditation</div>
-      <div>Import Approval (IT Equipment)</div>
-      <div>NGO/Private Education MOUs</div>
-      <div>Qualification Equating (Higher Ed)</div>
-      <div>Qualification Equating (Primary/Secondary)</div>
-    </div>
-  </section>
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">Other</option>
+      </select>
 
-  <footer>
-    &copy; 2025 PaterneServe. All rights reserved.
-  </footer>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+257..." required />
+
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" />
+
+      <!-- File uploads section -->
+      <label for="birthCertificate">Upload Birth Certificate</label>
+      <input type="file" id="birthCertificate" name="birthCertificate" accept=".pdf,.jpg,.png" required />
+      <small>Accepted formats: PDF, JPG, PNG</small>
+
+      <label for="parentID">Parent/Guardian ID (if applicant is a minor)</label>
+      <input type="file" id="parentID" name="parentID" accept=".pdf,.jpg,.png" />
+      <small>Optional if over 18 years old</small>
+
+      <label for="passportPhoto">Passport-size Photo</label>
+      <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required />
+      <small>Clear color photo with white background</small>
+
+      <label for="residenceProof">Proof of Residence (optional)</label>
+      <input type="file" id="residenceProof" name="residenceProof" accept=".pdf,.jpg,.png" />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
 </body>
 </html>
