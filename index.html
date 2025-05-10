@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -93,10 +93,10 @@
     <div class="logo"><strong>PaterneServe</strong></div>
     <div class="nav-links">
       <a href="#" style="color: white;">Support Center</a>
-      <a href="register.html" style="color: white;">Sign Up</a>
-      <a href="login.html" style="color: white;">Log In</a>
+      <a href="register.html" id="signupLink" style="color: white;">Sign Up</a>
+      <a href="login.html" id="loginLink" style="color: white;">Log In</a>
       <a href="#" style="color: white;">Find Applications</a>
-      <a href="#" style="color: white;" onclick="logout()">Logout</a>
+      <a href="#" id="logoutLink" style="color: white; display: none;" onclick="logout()">Logout</a>
       <a href="#" style="color: white;">English ▼</a>
     </div>
   </header>
@@ -108,7 +108,82 @@
     </div>
   </section>
 
-  <!-- [Other sections remain unchanged] -->
+  <section class="category">
+    <h2>Family</h2>
+    <div class="services">
+      <div>Certificate of Being Single</div>
+      <div>Divorce Services</div>
+      <div>Authentication for an orphan's status</div>
+      <div>Guardianship Record</div>
+      <div>Recommendation Letter for Persons with Disabilities</div>
+      <div>Certificate of Succession</div>
+      <div>Certificate of Cohabitation</div>
+      <div>Certificate for Widow/Widower</div>
+      <div>Certificate of Residence</div>
+      <a href="services/birth-certificate.html">Birth Services</a>
+      <div>Marriage Services</div>
+      <div>Death Services</div>
+      <div>Adoption Record</div>
+      <div>Record of Recognition</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Nationality & Immigration</h2>
+    <div class="services">
+      <div>Recovery of Burundian Nationality</div>
+      <div>Burundian Nationality by Acquisition</div>
+      <div>Authorization to Access Refugee Camp</div>
+      <div>Refugee Travel Document Application</div>
+      <div>Relocation to or from Refugee Camps</div>
+      <div>Emergency Travel Document</div>
+      <div>Penalty Payments</div>
+      <div>CEPGL Services</div>
+      <div>Burundian Nationality</div>
+      <div>Permit and Visa Transfer</div>
+      <div>Burundian Nationality by Origin</div>
+      <a href="services/passport-application.html">e-Passport Application</a>
+      <div>Laissez-passer</div>
+      <a href="services/visa-application.html">Visa Application</a>
+      <div>Permits</div>
+      <div>Foreigner ID Card</div>
+      <div>Foreigner Travel Document</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Identification</h2>
+    <div class="services">
+      <div>Change of Name</div>
+      <div>Application for National ID Correction</div>
+      <a href="services/national-id.html">Application for National ID</a>
+      <div>National ID Replacement</div>
+      <div>Certificate for Replacement of National Identity Card</div>
+      <div>Certificate of Full Identity</div>
+      <div>Certificate of Nationality</div>
+      <div>Certificate of Being Alive</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Health</h2>
+    <div class="services">
+      <div>COVID-19 Test</div>
+      <div>Laboratory Tests</div>
+      <div>Health Facility Licensing</div>
+      <div>Yellow Fever Vaccination</div>
+      <div>Community Based Health Insurance (Mutuelle)</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Education</h2>
+    <div class="services">
+      <div>Provision of MOUs to International NGOs and Private Companies</div>
+      <div>Application for Equating Foreign Qualifications - Higher Education</div>
+      <div>Application for Equating Foreign Qualifications - Primary & Secondary School</div>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 PaterneServe. All rights reserved.
@@ -120,7 +195,11 @@
       alert("You have been logged out.");
       window.location.href = "login.html";
     }
-  </script>
 
-</body>
-</html>
+    document.addEventListener("DOMContentLoaded", () => {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+      const user = JSON.parse(localStorage.getItem("user"));
+
+      const loginLink = document.getElementById("loginLink");
+      const signupLink = document.getElementById("signupLink");
+      const logoutLink = document.getElementById("logoutLink");
