@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PaterneServe</title>
+  <title>PaterneServe - Digital Services in Burundi</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,12 +11,10 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
-
     body {
       background-color: #f0fdf4;
       color: #1f2937;
     }
-
     header {
       background-color: #16a34a;
       color: white;
@@ -25,24 +23,21 @@
       justify-content: space-between;
       align-items: center;
     }
-
     header .nav-links {
       display: flex;
       gap: 20px;
       font-size: 14px;
     }
-
     .hero {
       background-color: #22c55e;
       text-align: center;
       padding: 60px 20px;
     }
-
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
+      color: white;
     }
-
     .search-bar {
       margin: 0 auto;
       width: 50%;
@@ -52,50 +47,38 @@
       display: flex;
       align-items: center;
     }
-
     .search-bar input {
       width: 100%;
       border: none;
       font-size: 16px;
       outline: none;
     }
-
-    .services {
-      background-color: #e6fbe8;
-      padding: 30px 20px;
-      margin: 30px auto;
-      width: 85%;
-      border-radius: 10px;
+    .category {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    .services h2 {
+    .category h2 {
+      color: #15803d;
+      font-size: 22px;
       margin-bottom: 10px;
-      font-size: 20px;
     }
-
-    .services p {
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: #4b5563;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
     }
-
-    .services a {
-      color: #065f46;
+    .services a, .services div {
+      background: #dcfce7;
+      padding: 15px;
+      border-radius: 8px;
       text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
+      color: #065f46;
+      display: block;
     }
-
-    .explore-button {
-      background-color: #16a34a;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 10px;
+    .services a:hover, .services div:hover {
+      background: #bbf7d0;
     }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -124,16 +107,89 @@
     </div>
   </section>
 
-  <section class="services">
-    <h2>Services on the upgraded PaterneServe</h2>
-    <p>Experience the upgraded PaterneServe! With new features and a smoother experience shaped by your feedback, the journey just keeps getting better — stay tuned for more!</p>
-    <div>
-      <a href="#">RICSTA - RW Domain Registration</a>
-      <a href="#">IPOSITA - Register an ePoBox Address</a>
-      <a href="#">IPOSITA - Renew an ePoBox Address</a>
-      <a href="#">IPOSITA - Change ePoBox Postal Office</a>
+  <section class="category">
+    <h2>Family</h2>
+    <div class="services">
+      <div>Certificate of Being Single</div>
+      <div>Divorce Services</div>
+      <div>Authentication for an orphan's status</div>
+      <div>Certificate of Needy Survivor of the Genocide</div>
+      <div>Guardianship Record</div>
+      <div>Gender and Family Promotion MoUs</div>
+      <div>Recommendation Letter for Persons with Disabilities</div>
+      <div>Certificate of Succession</div>
+      <div>Certificate of Cohabitation</div>
+      <div>Certificate for Widow/Widower</div>
+      <div>Certificate of Residence</div>
+      <div>Certificate of Genocide Survivors</div>
+      <div>Birth Services</div>
+      <div>Marriage Services</div>
+      <div>Death Services</div>
+      <div>Adoption Record</div>
+      <div>Record of Recognition</div>
     </div>
-    <button class="explore-button">Explore →</button>
+  </section>
+
+  <section class="category">
+    <h2>Nationality & Immigration</h2>
+    <div class="services">
+      <div>Recovery of Burundian Nationality</div>
+      <div>Burundian Nationality by Acquisition</div>
+      <div>Authorization to Access Refugee Camp</div>
+      <div>Refugee Travel Document Application</div>
+      <div>Relocation to or from Refugee Camps</div>
+      <div>Emergency Travel Document</div>
+      <div>Penalty Payments</div>
+      <div>DPA Payment</div>
+      <div>CEPGL Services</div>
+      <div>Burundian Nationality</div>
+      <div>Permit and Visa Transfer</div>
+      <div>Burundian Nationality by Origin</div>
+      <div>e-Passport Application</div>
+      <div>Laissez-passer</div>
+      <div>Visa Application</div>
+      <div>Permits</div>
+      <div>Foreigner ID Card</div>
+      <div>Foreigner Travel Document</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Identification</h2>
+    <div class="services">
+      <div>Change of Name</div>
+      <div>Application for National ID Correction</div>
+      <a href="services/national-id.html">Application for National ID</a>
+      <div>National ID Replacement</div>
+      <div>Certificate for Replacement of National Identity Card</div>
+      <div>Certificate of Full Identity</div>
+      <div>Certificate of Nationality</div>
+      <div>Certificate of Being Alive</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Health</h2>
+    <div class="services">
+      <div>COVID-19 Test</div>
+      <div>Laboratory Tests</div>
+      <div>Health Facility Licensing</div>
+      <div>Yellow Fever Vaccination</div>
+      <div>Community Based Health Insurance (Mutuelle)</div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h2>Education</h2>
+    <div class="services">
+      <div>Recommendation for Importation of Used IT Equipment</div>
+      <div>Issuance of Recommendation Letter to NGO by MINEDUC</div>
+      <div>ECD Accreditation Certificate</div>
+      <div>Foreign Equivalency Certification for TVET</div>
+      <div>Provision of MOUs to International NGOs and Private Companies</div>
+      <div>Application for Equating Foreign Qualifications - Higher Education</div>
+      <div>Application for Equating Foreign Qualifications - Primary & Secondary School</div>
+    </div>
   </section>
 
   <footer>
@@ -141,3 +197,4 @@
   </footer>
 </body>
 </html>
+
