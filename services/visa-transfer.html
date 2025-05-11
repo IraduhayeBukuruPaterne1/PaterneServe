@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "../login.html";
+    }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permit and Visa Transfer - PaterneServe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fdf4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #16a34a;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #15803d;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="file"] {
+      padding: 0.3rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a34a;
+    }
+    .back-link {
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PaterneServe</h1>
+  </header>
+
+  <main>
+    <p class="back-link"><a href="../index.html" style="color:#16a34a;">&larr; Back to Home</a></p>
+    <h2>Permit and Visa Transfer Application</h2>
+    <form>
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="passportNo">Passport or Visa Number</label>
+      <input type="text" id="passportNo" name="passportNo" required />
+
+      <label for="nationality">Nationality</label>
+      <input type="text" id="nationality" name="nationality" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+257..." required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="supportingDoc">Upload Existing Visa/Permit Document</label>
+      <input type="file" id="supportingDoc" name="supportingDoc" accept=".pdf,.jpg,.png" required />
+
+      <label for="newDestination">New Destination or Employer</label>
+      <input type="text" id="newDestination" name="newDestination" required />
+
+      <label for="reason">Reason for Transfer</label>
+      <input type="text" id="reason" name="reason" required />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+</body>
+</html>
+
