@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommendation for Persons with Disabilities - PaterneServe</title>
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "../login.html";
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fdf4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #16a34a;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #15803d;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="file"] {
+      padding: 0.3rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a34a;
+    }
+    .back-link {
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PaterneServe</h1>
+  </header>
+
+  <main>
+    <p class="back-link"><a href="../index.html" style="color:#16a34a;">&larr; Back to Home</a></p>
+    <h2>Recommendation for Persons with Disabilities</h2>
+    <form>
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="disabilityType">Type of Disability</label>
+      <input type="text" id="disabilityType" name="disabilityType" required />
+
+      <label for="disabilityID">Upload Disability ID/Proof</label>
+      <input type="file" id="disabilityID" name="disabilityID" accept=".pdf,.jpg,.png" required />
+
+      <label for="supportNeeded">Support or Recommendation Needed</label>
+      <textarea id="supportNeeded" name="supportNeeded" rows="4" required></textarea>
+
+      <label for="contact">Contact Phone</label>
+      <input type="tel" id="contact" name="contact" placeholder="+257..." required />
+
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+</body>
+</html>
+
