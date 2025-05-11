@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authentication for Orphan's Status - PaterneServe</title>
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "../login.html";
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fdf4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #16a34a;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #15803d;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="file"] {
+      padding: 0.3rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a34a;
+    }
+    small {
+      display: block;
+      margin-top: 4px;
+      color: #6b7280;
+      font-size: 12px;
+    }
+    .back-link {
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PaterneServe</h1>
+  </header>
+
+  <main>
+    <p class="back-link"><a href="../index.html" style="color:#16a34a;">&larr; Back to Home</a></p>
+    <h2>Authentication for Orphan's Status</h2>
+    <form>
+      <label for="childName">Child's Full Name</label>
+      <input type="text" id="childName" name="childName" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="birthPlace">Place of Birth</label>
+      <input type="text" id="birthPlace" name="birthPlace" required />
+
+      <label for="guardianName">Guardian's Full Name</label>
+      <input type="text" id="guardianName" name="guardianName" required />
+
+      <label for="relationship">Relationship to Child</label>
+      <input type="text" id="relationship" name="relationship" required />
+
+      <label for="deathCertificates">Upload Death Certificates of Parents</label>
+      <input type="file" id="deathCertificates" name="deathCertificates" accept=".pdf,.jpg,.png" />
+
+      <label for="authorityCert">Upload Certification from Local Authority or NGO</label>
+      <input type="file" id="authorityCert" name="authorityCert" accept=".pdf,.jpg,.png" required />
+
+      <label for="childPhoto">Upload Passport-size Photo of Child</label>
+      <input type="file" id="childPhoto" name="childPhoto" accept=".jpg,.jpeg,.png" required />
+
+      <label for="guardianID">Upload Guardian's ID</label>
+      <input type="file" id="guardianID" name="guardianID" accept=".pdf,.jpg,.png" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+257..." required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+</body>
+</html>
+
